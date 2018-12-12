@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Styles from './styles.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div style={Styles.App}>
+        <div style={Styles.Title}>
+          <p>(Nicholas) Kiran Merchant</p>
+        </div>
+        <div style={Styles.ProfilePicture}>
+          <img src="/profile_picture.jpg" alt="Profile Picture" />
+        </div>
+        <div style={Styles.Bio}>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Hey it's me, Kiran Merchant. 
+            And if I have one thing to say, really, truly,
+            it's that A.J. (AJ) is a big &apos;ol dummy. 
+            Thank you very much, please hire me. 
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        </div>
       </div>
     );
   }
