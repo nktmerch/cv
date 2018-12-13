@@ -2,28 +2,88 @@ import React, { Component } from 'react';
 import './App.css';
 import Styles from './styles.js';
 
+
+class ProfilePicture extends Component{
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      alt: false
+    }  
+  }
+  
+  handleHoverChange = () => {
+    this.setState(Object.assign(this.state, {alt: !this.state.alt}));
+  }
+  
+  getPicture(){
+    return this.state.alt ? this.props.alt : this.props.def;
+  }
+  
+  render() {
+    const picture = this.getPicture();
+      
+    return(
+      <div 
+        style={Styles.ProfilePicture} 
+        onMouseEnter={this.handleHoverChange} 
+        onMouseLeave={this.handleHoverChange}>
+        <img src={picture}></img>
+      </div>
+    );
+  }
+}
+
+class Sidebar extends Component {
+  buildList(){
+    const pages = this.props.pages;
+    for(let i = 0; i < pages.length; i++){
+      
+    }
+  }
+  
+  render(){
+    return(
+      <div style={Styles.Sidebar}>
+        
+      </div>
+    );
+  }
+}
+
 class App extends Component {
   render() {
     
-    //TODO: move this somewhere better
-    const profilePicture = "https://lh3.googleusercontent.com/NhAivPpv4fwi4OaheKmKOg7j0CVv7abAZbaa573m8mqjm47oeAPxiNCe3Gq-iHIhb2vbayme6gA-HOD7GyGholMdV2sryH5JuwWjGKx5X0EHFzKQCudvJctGQgskjU14_xhs6fCusnUTITZmbZJwBhjcbSYy8XeG8y9oqS28GwowsH6haG9ab-UQRewHvJsdQHyVqanycUVwLhHV2cDTu1AfAlfdP8c6OugbVD_3S60eVRf3pbiTvZ1qw3LeXVmgdIfrWtA7Rtkjn1Bheo38KGwazhxznJvOVKriP7Db8foDEkR-au9qehaBcGWudbxAaTYM9JOrtRNnM19o0_zpBk3KC6EQvuVABbUSELi47pbsafly02tSVHuPBcMhlj9Q6ayfeTJ5C04LrzHyTtXh-MJV153QhK6KZ6xB8Fw8UfU-mPEq57-zmxiriwsNZeAPavuRYE2-x5SV3UkOcujz8Z8RIpz4wg7tp1t1w3OhnCH0g4Ra4lEJ1kIj7-bEc22bFCFjC5l38_y0UnSLSTCNTXv39hfKVqpAnLu7fGNgBGl_Tr7wQOQMJfMZc5hVg6OjgZ3tQw0g4mqJJJrBdQC5LDhqnSHzRDFcz1QaJMal82IqfcBX2hc7I1Q6v1rtoCY4AY2pSEkiv94VnuoDt2hm1zbEwOUsVu0e3H00VXJx6-cd2l_1tIks68fdPBDhYEOZmTSNUvXzYRRB00T1CA=w771-h960-no";
+    //TODO: move this somewhere better, using webpack? 
+    const defPicture = "https://goo.gl/pq4Wdh";
+    const altPicture = "https://goo.gl/22JBBD";
+    
+    //Some links
+    const linkedIn = "https://www.linkedin.com/in/nicholas-m-252227174/";
+    const gitHub = "https://github.com/nktmerch/nktmerch.github.io/blob/master/README.md";
+    
+    //Yeah, same with this?
+    const pages = ["about me", "cirriculum vitae", "things I like"];
     
     return (
       <div style={Styles.App}>
         <div style={Styles.Title}>
-          <p>(Nicholas) Kiran Merchant</p>
-        </div>
-        <div style={Styles.ProfilePicture}>
-          <img src={profilePicture} alt="Profile Picture" />
-        </div>
-        <div style={Styles.Bio}>
           <p>
-            Hey it's me, Kiran Merchant. 
-            And if I have one thing to say, really, truly,
-            it's that A.J. (AJ) is a big &apos;ol dummy. 
-            Thank you very much, please hire me. 
+            (Nicholas) Kiran Merchant
           </p>
         </div>
+        <ProfilePicture def={defPicture} alt={altPicture}>
+        </ProfilePicture>
+        <div style={Styles.Bio}>
+          <p>
+            You can find more information on my 
+            <a href={linkedIn}> LinkedIn </a>
+            page, or check out my projects on
+            <a href={gitHub}> GitHub </a>.
+          </p>
+        </div>
+        <Sidebar pages={pages} selected={0}>
+        </Sidebar>
       </div>
     );
   }

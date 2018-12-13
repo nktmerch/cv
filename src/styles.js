@@ -26,6 +26,15 @@ const Bio = {
   fontFamily: "'Futura', Times, serif",
 }
 
+const Sidebar = {
+  //Grid positioning
+  gridArea: "side",
+  
+  //Styling
+  fontSize: "30px",
+  fontFamily: "'Futura', Times, serif",
+}
+
 // App wraps the rest of our reactJS page
 const App = {
   //Grid positioning
@@ -35,9 +44,9 @@ const App = {
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   gridTemplateRows: ".25fr 1.5fr 1.125fr",
   gridTemplateAreas: `
-                      '. title title .'
-                      '. profile_picture . .'
-                      '. bio bio .'
+                      '. title title side'
+                      '. profile_picture . side'
+                      '. bio bio side'
                      `                   
 }
 
