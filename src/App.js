@@ -342,7 +342,7 @@ class App extends Component {
     //Check the page width! (could do this with global context)
     const width = this.state.width;
     let Style, small;
-     if (width <= 790) {
+     if (width <= 375) {
        Style = Styles.SmallApp;
        small = true;
      } else{

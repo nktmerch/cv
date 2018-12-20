@@ -118,7 +118,7 @@ const SmallApp = {
   display: "grid",
   minWidth: "100%",
   minHeight: "100vh",
-  gridTemplateColumns: "1fr",
+  gridTemplateColumns: "375px",
   gridTemplateRows: "300px 0.25fr 1fr",
   gridTemplateAreas: `
                       'top'
