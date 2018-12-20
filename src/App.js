@@ -125,8 +125,8 @@ class Who extends Component {
     const email = <Link href={emailURL} name="nicholas_merchant@brown.edu"/>
     
     //Set up my profile photo
-    const defPicture = "/profile_picture.jpg";
-    const altPicture = "/profile_alt.jpg";
+    const defPicture = "https://raw.githubusercontent.com/nktmerch/cv/master/public/profile_picture.jpg";
+    const altPicture = "https://raw.githubusercontent.com/nktmerch/cv/master/public/profile_alt.jpg";
     
     //Get the style
     const currPage = this.props.currPage;
