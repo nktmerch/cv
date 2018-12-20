@@ -1,29 +1,10 @@
 
-
-// Title holds our name
-const Title = {
+const Corner = {
   //Grid positioning
-  gridArea: "title",
+  gridArea: "corner",
   
   //Styling
-  fontSize: "40px",
-  fontFamily: "'Futura', Times, serif",
-}
-
-// ProfilePicture holds our profile Picture
-const ProfilePicture = {
-  //Grid positioning
-  gridArea: "profile_picture",
-}
-
-// Bio holds our bio
-const Bio = {
-  //Grid positioning
-  gridArea: "bio",
-  
-  //Styling
-  fontSize: "25px",
-  fontFamily: "'Futura', Times, serif",
+  background: "#CE7926",
 }
 
 const Sidebar = {
@@ -31,8 +12,78 @@ const Sidebar = {
   gridArea: "side",
   
   //Styling
+  padding: "10%",
+  paddingTop: "0",
+  textAlign: "right",
   fontSize: "30px",
   fontFamily: "'Futura', Times, serif",
+  background: "#CE7926",
+}
+
+const Clicked = {
+  //Styling
+  color: "#A40705",
+}
+
+// Title holds our name
+const Title = {
+  //Grid positioning
+  gridArea: "title",
+  
+  //Styling
+  padding: "0",
+  paddingTop: "3%",
+  paddingLeft: "3%",
+  fontSize: "40px",
+  fontFamily: "'Futura', Times, serif",
+}
+
+//My profile picture
+const ProfPic = {
+  //Styling
+  maxWidth: "43%",
+  paddingLeft: "5%",
+}
+
+//For section headers
+const Header = {
+  //Styling
+  marginTop: "0",
+  fontSize: "25px",
+  fontWeight: "bold",
+  fontFamily: "'Futura', Times, serif",
+}
+
+//Mostly just for the Bio
+const Medium = {
+  //Styling
+  marginTop: "0",
+  fontSize: "25px",
+  fontFamily: "'Futura', Times, serif",
+}
+
+//For smaller body paragraphs
+const Body = {
+  //Styling
+  paddingLeft: "2%",
+  fontSize: "20px",
+  fontFamily: "'Futura', Times, serif",
+}
+
+const Text = {
+  Header: Header,
+  Medium: Medium,
+  Body: Body,
+}
+
+const Main = {
+  //Grid positioning
+  gridArea: "main",
+  
+  //Styling
+  paddingTop: "0",
+  paddingLeft: "5%",
+  align: "left",
 }
 
 // App wraps the rest of our reactJS page
@@ -41,18 +92,22 @@ const App = {
   display: "grid",
   minWidth: "100%",
   minHeight: "100vh",
-  gridTemplateColumns: "1fr 1fr 1fr 1fr",
-  gridTemplateRows: ".25fr 1.5fr 1.125fr",
+  gridTemplateColumns: "1fr 2fr 1fr",
+  gridTemplateRows: "125px .825fr",
   gridTemplateAreas: `
-                      '. title title side'
-                      '. profile_picture . side'
-                      '. bio bio side'
-                     `                   
+                      'corner title title'
+                      'side main .'
+                     `,              
 }
 
+
 export default {
+  Corner: Corner,
+  Sidebar: Sidebar,
+  Clicked: Clicked, 
   Title: Title,
-  ProfilePicture: ProfilePicture,
-  Bio: Bio,
-  App: App
+  ProfPic: ProfPic,
+  Text: Text,
+  Main: Main,
+  App: App,
 }

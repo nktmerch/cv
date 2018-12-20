@@ -1,24 +1,40 @@
+p {
+  cursor: default;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
+div {
+  /*border: 2px solid black;*/
+}
+
 a:link {
-  color: #666b99;
+  color: #400763;
   text-decoration: none;
 }
 
 a:hover{
-  color: #202c93;
+  color: #fcce02 !important;
   text-decoration: none;
 }
 
 a:active{
-  color: #072354;
+  color: #fce702 !important;
   text-decoration: none;
 }
 
 a:visited{
-  color: #512784;
+  color: #400763;
   text-decoration: none;
+}
+
+.page:hover{
+  color: #fcce02;
+}
+
+.page:active{
+  color: #fce702;
 }
