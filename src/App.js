@@ -61,8 +61,13 @@ class Sidebar extends Component {
   render(){
     const listOfPages = this.buildList();
     
+    //Handle page resizing 
+    //If I did this any more frequently I would create a global context
+    const small = this.props.small;
+    const Style = small ? Styles.Topbar : Styles.Sidebar
+    
     //Render the sidebar
-    return <div style={Styles.Sidebar}>{listOfPages}</div>;
+    return <div style={Style}>{listOfPages}</div>;
   }
 }
 
@@ -281,7 +286,7 @@ class Stuff extends Component {
           This recipie from the New York Times
         </p>
         <a href={nytRecipieURL} rel={rel} target={target}>
-          <img src={nytRecipieImage} alt={nytRecipieImage}/>
+          <img src={nytRecipieImage} alt={nytRecipieAlt}/>
         </a>
         <br></br>
         <br></br>
@@ -299,8 +304,19 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      width: 0,
       currPage: 0,
     }  
+  }
+  
+  //Handle resizing for small screens
+  updateAppWidth = () => {
+    console.log("firing");
+    this.setState(Object.assign(this.state, {width: window.innerWidth}));
+  }
+  
+  componentDidMount(){
+    this.updateAppWidth();
   }
   
   updatePage = (index) => {
@@ -323,8 +339,19 @@ class App extends Component {
     //Get the current page
     //const main = this.getPage();
     
+    //Check the page width! (could do this with global context)
+    const width = this.state.width;
+    let Style, small;
+     if (width <= 790) {
+       Style = Styles.SmallApp;
+       small = true;
+     } else{
+       Style = Styles.App;
+       small = false;
+     }
+    
     return (
-      <div style={Styles.App}>
+      <div style={Style}>
         {/*Color the top corner*/}
         <div style={Styles.Corner}></div>
         
@@ -332,7 +359,8 @@ class App extends Component {
         <Sidebar 
           updatePage={updatePage} 
           pages={pages} 
-          currPage={currPage}>
+          currPage={currPage}
+          small={small}>
         </Sidebar>
         
         {/*My name!*/}
