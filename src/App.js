@@ -222,7 +222,7 @@ class CV extends Component {
           well as significant experience leading technical outings, mostly Rock 
           Climbing, Skiing, and Backpacking trips. I am currently a leader for the Brown 
           Outing Club, running outdoor trips and education for the greater Brown 
-          commuity.
+          community.
         </p>
       </div>
     );
