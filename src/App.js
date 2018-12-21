@@ -205,22 +205,22 @@ class CV extends Component {
         </p>
         <p style={Styles.Text.Header}>Work in Computer Science</p>
         <p style={Styles.Text.Body}>
-          I am a undergraduate teaching assistant for ({cs32}), holding hours, 
-          grading assignments, and working on the current and future design of 
-          the course. 
+          I am a undergraduate teaching assistant for ({cs32}), working on 
+          the current and future design of the course. Next term I will start 
+          holding hours and grading assignments.
         </p>
         <p style={Styles.Text.Header}>Some Writing</p>
         <p style={Styles.Text.Body}>
           If you want to read some of my journalistic writing, check out ({bpr})
-          peice for the Brown Political Review on the global Tuberculosis 
-          epedemic, or ({gina}) unpublished academic peice on the Station night 
-          club fire in Rhode Island.
+          piece for the Brown Political Review on the global Tuberculosis 
+          epidemic, or ({gina}) unpublished academic piece on the Station 
+          nightclub fire in Rhode Island.
         </p>
         <p style={Styles.Text.Header}>Outside Interests</p>
         <p style={Styles.Text.Body}>
           I am an Outdoor Guide by training, with WFA and CPR certifications as 
           well as significant experience leading technical outings, mostly Rock 
-          Climbing and Backpacking trips. I am currently a leader for the Brown 
+          Climbing, Skiing, and Backpacking trips. I am currently a leader for the Brown 
           Outing Club, running outdoor trips and education for the greater Brown 
           commuity.
         </p>
@@ -284,7 +284,7 @@ class Stuff extends Component {
         <br></br>
         <br></br>
         <p style={Styles.Text.Medium}>
-          This recipie from the New York Times
+          This recipe from the New York Times
         </p>
         <a href={nytRecipieURL} rel={rel} target={target}>
           <img style={{maxWidth: "100%"}} src={nytRecipieImage} alt={nytRecipieAlt}/>
