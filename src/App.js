@@ -253,7 +253,8 @@ class Stuff extends Component {
         <p style={Styles.Text.Medium}>
           This video of Adam Ondra
         </p>
-        <div>
+        <div 
+          style={{maxWidth: "100%"}}>
           <iframe 
             title="youtube" 
             width="560" 
@@ -286,7 +287,7 @@ class Stuff extends Component {
           This recipie from the New York Times
         </p>
         <a href={nytRecipieURL} rel={rel} target={target}>
-          <img src={nytRecipieImage} alt={nytRecipieAlt}/>
+          <img style={{maxWidth: "100%"}} src={nytRecipieImage} alt={nytRecipieAlt}/>
         </a>
         <br></br>
         <br></br>
