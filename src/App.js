@@ -145,7 +145,7 @@ class Who extends Component {
         {/*My Bio*/}
         <div style={Styles.Text.Medium}>
           <p>
-            My name is Kiran, I'm a Sophomore studying Computer Science 
+            My name is Kiran, I'm a Junior studying Computer Science 
             at Brown University. You can find more information on my 
             ({linkedIn}) page, check out my projects on ({gitHub}), or click
             one of the links on the side to read more.
@@ -173,6 +173,18 @@ class CV extends Component {
     
     const cs32URL = "http://cs.brown.edu/courses/cs032/";
     const cs32 = <Link href={cs32URL} name="CS32"/>;
+
+    const cs195URL = "http://cs.brown.edu/courses/cs195y/2019/";
+    const cs195 = <Link href={cs195URL} name="CS195"/>;
+
+    const cs173URL = "https://cs.brown.edu/courses/cs173/2019/";
+    const cs173 = <Link href={cs173URL} name="CS173"/>;
+
+    const cs147URL = "http://cs.brown.edu/courses/csci1470/";
+    const cs147 = <Link href={cs147URL} name="CS147"/>;
+
+    const weiboURL = "https://docs.google.com/document/d/10bVrTpSnOpZd_E_Yxo_dPzL3NomuoLVy6RFqoq2fkvY/edit";
+    const weibo = <Link href={weiboURL} name="Here"/>;
     
     const bprURL = "http://www.brownpoliticalreview.org/2018/11/microscopic-threat-massive-implications-2/";
     const bpr = <Link href={bprURL} name="This"/>;
@@ -188,33 +200,49 @@ class CV extends Component {
       <div style={MainStyle}>
         <p style={Styles.Text.Header}>Technical Skills</p>
         <p style={Styles.Text.Body}>
-          I am deeply versed in Java and C, as well as
-          frontend web applications using HTML5, CSS, ECMAScript 6,
-          and contemporary web technologies like ReactJS. 
-          I am familiar with Object Oriented and Functional Programming
-          best practices as well as full stack design for applications.
+          I am proficient in Java and Python, as well as
+          frontend web applications using HTML5, CSS, JavaScript,
+          and contemporary web technologies like ReactJS. I am familiar with C,
+          and am independently learning Haskell and SQL. I am versed in
+          Object Oriented and Functional Programming best practices as well as full 
+          stack design for applications. In my classes, I have come into frequent
+          contact with academic languages, including Formal Verification using 
+          Dafny and Alloy and Language Design using Racket. 
         </p>
         <p style={Styles.Text.Header}>(Relevant) Classes I've Taken</p>
         <p style={Styles.Text.Body}>
           In Computer Science, I've studied Functional Programming and basic 
           data structures in ({cs19}), the low level structure of computer 
-          systems in ({cs33}), and software engineering principles in ({cs32}). 
-          In Math, I've taken single as well as multivariable Calculus, and 
-          Linear Algebra. In Economics, I have taken basic Micro and Macro, as 
-          well as a class in mathematical Microeconomics.
+          systems in ({cs33}), software engineering principles in ({cs32}), 
+          and Formal Verification methods in ({cs195}). I am currently taking
+          ({cs173}), a class on programming language design, and ({cs147}), 
+          an introduction to Deep Learning.
         </p>
-        <p style={Styles.Text.Header}>Work in Computer Science</p>
+        <p style={Styles.Text.Header}>Work Experience</p>
         <p style={Styles.Text.Body}>
-          I am a undergraduate teaching assistant for ({cs32}), working on 
-          the current and future design of the course. Next term I will start 
-          holding hours and grading assignments.
+          I spent the last summer as an intern at IPlytics GmbH, an intellectual property
+          intelligence company that aggregated global patent data, analyzed it, and provided
+          insights using an online platform. I worked with the company while it was transitioning
+          towards continuous integration, and I helped build out the neccesary pipelines, 
+          developing a frontend testing suite based on Selenium and Java 8 that allowed testers to write 
+          simple, declarative walkthroughs modeling user behavior on the platform, with a focus on ensuring 
+          test stability on inconsistent browsers without sacrificing the speed of the testing suite. 
+        </p>
+        <p style={Styles.Text.Header}>Teaching Experience</p>
+        <p style={Styles.Text.Body}>
+          I was an undergraduate teaching assistant for ({cs32}), where I contributed to
+          course design, graded projects, held hours, and mentored two student teams in developing
+          their own independent final project.
         </p>
         <p style={Styles.Text.Header}>Some Writing</p>
         <p style={Styles.Text.Body}>
-          If you want to read some of my journalistic writing, check out ({bpr})
-          piece for the Brown Political Review on the global Tuberculosis 
-          epidemic, or ({gina}) unpublished academic piece on the Station 
-          nightclub fire in Rhode Island.
+          I wrote a research paper on surveillance in Xinjiang, concerning the detention of 
+          Uyghur minorities in the reigon. The bulk of the tecnical work involved web scraping 
+          censored posts from the Chinese social media site Weibo, and analyzing them qualitatively 
+          to uncover narratives of detention in the mainland China. You can find the peice ({weibo}).
+          If you want to read some of my journalistic writing, check out ({bpr}) piece for the Brown 
+          Political Review on the global Tuberculosis epidemic, or ({gina}) unpublished academic piece 
+          on the Station nightclub fire in Rhode Island.
         </p>
         <p style={Styles.Text.Header}>Outside Interests</p>
         <p style={Styles.Text.Body}>
