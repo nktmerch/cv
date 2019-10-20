@@ -16,7 +16,7 @@ const Sidebar = {
   paddingTop: "0",
   textAlign: "right",
   fontSize: "30px",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
   background: "#CE7926",
 }
 
@@ -29,7 +29,7 @@ const Topbar = {
   paddingTop: "0",
   textAlign: "center",
   fontSize: "35px",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
   background: "#CE7926",
 }
 
@@ -48,8 +48,7 @@ const Title = {
   paddingTop: "3%",
   paddingLeft: "3%",
   fontSize: "40px",
-  fontWeight: "bold",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
 }
 
 //My profile picture
@@ -65,7 +64,7 @@ const Header = {
   marginTop: "0",
   fontSize: "25px",
   fontWeight: "bold",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
 }
 
 //Mostly just for the Bio
@@ -73,7 +72,7 @@ const Medium = {
   //Styling
   marginTop: "0",
   fontSize: "25px",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
 }
 
 //For smaller body paragraphs
@@ -81,7 +80,7 @@ const Body = {
   //Styling
   paddingLeft: "2%",
   fontSize: "20px",
-  fontFamily: "'Vollkorn', Times, serif",
+  fontFamily: "Futura, Times, serif",
 }
 
 const Text = {
