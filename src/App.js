@@ -122,7 +122,7 @@ class Who extends Component {
     const linkedIn = <Link href={linkedInURL} name="LinkedIn" />;
     
     //Set up the hyperlink to my GitHub
-    const gitHubURL = "https://github.com/nktmerch/nktmerch.github.io/blob/master/README.md";
+    const gitHubURL = "https://github.com/nktmerch";
     const gitHub = <Link href={gitHubURL} name="GitHub"/>;
     
     //Set up the hyperlink to my email
@@ -354,7 +354,7 @@ class App extends Component {
   
   render() {
     //The pages for the navigation menu (sidebar)
-    const pages = ["who is that", "cirriculum vitae", "things I like"];
+    const pages = ["who is that", "curriculum vitae", "things I like"];
     
     //The page that is currently selected
     const currPage = this.state.currPage;
